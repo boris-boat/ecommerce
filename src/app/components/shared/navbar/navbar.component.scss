@@ -1,0 +1,40 @@
+.navigation {
+  height: 10vh;
+  background-color: #f5f5dc;
+  .cart-icon {
+    background-color: #f5f5dc;
+    border: none;
+  }
+  .cart-items {
+    padding: 20px;
+    min-width: 500px;
+    max-width: auto;
+    .card {
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .quantity-buttons {
+          background-color: white;
+          border: none;
+        }
+      }
+    }
+  }
+}
+h1 {
+  cursor: pointer;
+}
+.no-items {
+  position: absolute;
+  right: 0;
+  .no-items-card {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}

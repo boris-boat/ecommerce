@@ -1,0 +1,15 @@
+.category-cointainer {
+  display: flex;
+  margin: auto;
+  width: 30%;
+  justify-content: space-around;
+  button {
+    min-width: 70px;
+    padding: 5px;
+    background-color: white;
+    border: none;
+  }
+  .active {
+    border-bottom: 2px solid black;
+  }
+}

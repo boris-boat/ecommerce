@@ -1,0 +1,13 @@
+.category-navbar {
+  margin-top: 1px;
+  height: 5vh;
+  background-color: #eca869;
+  .category-navbar-items {
+    display: flex;
+  }
+}
+h3 {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}

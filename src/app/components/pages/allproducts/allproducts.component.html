@@ -1,0 +1,20 @@
+<div class="row mt-2">
+  <div class="category-cointainer" #categoryContainer *ngIf="categories.length">
+    <button (click)="getAllProducts('', $event.target)" class="active">
+      All
+    </button>
+    <button
+      class="category-button"
+      *ngFor="let category of categories"
+      (click)="getAllProducts(category, $event.target)"
+    >
+      {{ category }}
+    </button>
+  </div>
+</div>
+<div class="row mt-4" *ngIf="products.length != 0">
+  <div class="col-3 mb-4" *ngFor="let item of products">
+    <app-one-product [item]="item"></app-one-product>
+  </div>
+</div>
+<app-loadingspinner *ngIf="products.length == 0"> </app-loadingspinner>

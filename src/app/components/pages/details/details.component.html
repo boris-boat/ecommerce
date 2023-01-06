@@ -1,0 +1,23 @@
+<div class="row" *ngIf="product.id">
+  <div class="col-6 left">
+    <img [src]="product.image" alt="" />
+  </div>
+  <div class="col-6 right">
+    <mat-card class="example-card details-card">
+      <mat-card-header>
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="desc-text">{{ product.description }}</p>
+        <p class="desc-text mt-5">{{ product.price | currency : "EUR" }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="addToCart(product)">
+          Dodaj u korpu
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<app-loadingspinner *ngIf="!product.id"> </app-loadingspinner>

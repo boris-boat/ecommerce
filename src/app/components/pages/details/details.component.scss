@@ -1,0 +1,33 @@
+.left {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .details-card {
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    width: 70%;
+    height: 80%;
+  }
+  .desc-text {
+    margin: auto;
+    width: 60%;
+  }
+}

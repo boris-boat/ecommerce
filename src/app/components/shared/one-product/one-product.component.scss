@@ -1,0 +1,31 @@
+.single-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 450px;
+  background-color: white;
+  overflow: auto;
+  .product-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  img {
+    object-fit: contain;
+    height: 60%;
+  }
+  .price-wrapper {
+    display: flex;
+    justify-content: center;
+    .price {
+      color: black;
+      font-size: 25px;
+    }
+  }
+  .button-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
