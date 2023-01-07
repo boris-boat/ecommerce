@@ -53,7 +53,9 @@
             >
               <div class="card" *ngFor="let item of cart.items">
                 <div ngbDropdownItem class="title">
-                  {{ item.title }}
+                  <h3 class="m-0 p-0" [routerLink]="['/details', item.id]">
+                    {{ item.title }}
+                  </h3>
                 </div>
                 <div class="quantity">
                   <button
@@ -73,8 +75,14 @@
                   </button>
                 </div>
               </div>
-              <div class="button-wrapper">
-                <button>Button</button>
+              <div class="button-wrapper mt-3">
+                <button
+                  [routerLink]="['/cart']"
+                  mat-raised-button
+                  color="primary"
+                >
+                  Pregledaj korpu
+                </button>
               </div>
             </div>
           </div>

@@ -1,0 +1,38 @@
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    .card {
+      width: 80%;
+      .left-img {
+        width: 100%;
+
+        object-fit: contain;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .text {
+      text-align: center;
+      width: 80%;
+      padding: 20px;
+    }
+    .links {
+      width: 30%;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}

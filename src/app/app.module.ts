@@ -22,6 +22,8 @@ import { SearchComponent } from './components/pages/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocationsComponent } from './components/pages/locations/locations.component';
 import { SanitizeUrlPipePipe } from './pipes/sanitize-url-pipe.pipe';
+import { AboutComponent } from './components/pages/about/about.component';
+import { CartComponent } from './components/pages/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { SanitizeUrlPipePipe } from './pipes/sanitize-url-pipe.pipe';
     LoadingspinnerComponent,
     SearchComponent,
     LocationsComponent,
-    SanitizeUrlPipePipe
+    SanitizeUrlPipePipe,
+    AboutComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
   cartObservable = new BehaviorSubject(new Cart())
+  totalPriceObservable = new BehaviorSubject(0)
   cart = new Cart()
   constructor() { }
   getCart() {
@@ -16,6 +17,8 @@ export class CartService {
       this.cart = cart
       this.cartObservable.next(cart)
     }
+    this.getTotalPrice()
+
   }
   addToCart(item: Product) {
     let index = this.cart.items.findIndex((itemInCart) => item.id === itemInCart.id)
@@ -32,5 +35,13 @@ export class CartService {
     this.cart = cart
     localStorage.setItem("cart", JSON.stringify(this.cart))
     this.getCart()
+    this.getTotalPrice()
+  }
+  getTotalPrice() {
+    let total = 0
+    this.cart.items.forEach((item) =>
+      total += (item.price * item.quantity)
+    )
+    this.totalPriceObservable.next(total)
   }
 }

@@ -5,13 +5,16 @@ import { HomepageComponent } from './components/pages/homepage/homepage.componen
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LocationsComponent } from './components/pages/locations/locations.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { CartComponent } from './components/pages/cart/cart.component';
 
 const routes: Routes = [{ path: "", component: HomepageComponent },
 { path: "details/:id", component: DetailsComponent },
 { path: "allproducts", component: AllproductsComponent },
 { path: "search/:query", component: SearchComponent }, {
   path: "locations", component: LocationsComponent
-}];
+}, { path: "about", component: AboutComponent }
+  , { path: "cart", component: CartComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

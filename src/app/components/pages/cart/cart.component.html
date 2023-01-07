@@ -1,0 +1,38 @@
+<div class="row h-75 p-5">
+  <div class="col-6">
+    <div class="cart-items-wrapper">
+      <div class="card">
+        <div class="card m-3 p-3 one-item" *ngFor="let item of cartItems.items">
+          <div class="title">
+            <div class="title-left">
+              <p>{{ item.title }}</p>
+            </div>
+          </div>
+          <div class="quantity">
+            <p>{{ item.price | currency : "EUR" }}</p>
+            <button class="quantity-buttons" (click)="changeQuantity(item, -1)">
+              <mat-icon class="mt-1">keyboard_arrow_left</mat-icon>
+            </button>
+
+            <p>
+              {{ item.quantity }}
+            </p>
+            <button class="quantity-buttons" (click)="changeQuantity(item, 1)">
+              <mat-icon class="mt-1"> keyboard_arrow_right</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 right card">
+    <div class="row">
+      <div class="col m-3">
+        <div class="total-price card">
+          <h2>Ukupna cena : {{ totalPrice | currency : "EUR" }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="form-wrapper"></div>
+  </div>
+</div>

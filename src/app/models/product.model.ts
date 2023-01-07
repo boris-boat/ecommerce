@@ -8,7 +8,7 @@ export class Product {
 
     image: string;
 
-    price: string;
+    price: number;
 
     rating: Rating;
 

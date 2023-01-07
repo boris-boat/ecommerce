@@ -1,0 +1,40 @@
+p {
+  margin: 0;
+}
+.cart-items-wrapper {
+  height: 70vh;
+  .card {
+    max-height: 100%;
+    overflow: auto;
+    .one-item {
+      min-height: 60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .title {
+        width: auto;
+        display: flex;
+        align-items: center;
+        .title-right {
+          margin-left: 30px;
+        }
+      }
+      .quantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .quantity-buttons {
+          background-color: white;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.right {
+  .total-price {
+    h2 {
+      margin: auto;
+    }
+  }
+}
