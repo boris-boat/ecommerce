@@ -1,0 +1,12 @@
+<div class="row mt-4" *ngIf="products">
+  <div class="col-3 mb-4" *ngFor="let item of products">
+    <app-one-product [item]="item"></app-one-product>
+  </div>
+</div>
+<app-loadingspinner *ngIf="!products!.length && products!.length != 0">
+</app-loadingspinner>
+<div class="row">
+  <div class="col not-found">
+    <h1 *ngIf="products!.length === 0">Nije pronadjen nijedan artikal!</h1>
+  </div>
+</div>

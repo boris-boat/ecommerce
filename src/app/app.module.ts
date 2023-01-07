@@ -18,6 +18,8 @@ import { OneProductComponent } from './components/shared/one-product/one-product
 import { DetailsComponent } from './components/pages/details/details.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { LoadingspinnerComponent } from './components/shared/loadingspinner/loadingspinner.component';
+import { SearchComponent } from './components/pages/search/search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +30,14 @@ import { LoadingspinnerComponent } from './components/shared/loadingspinner/load
     AllproductsComponent,
     OneProductComponent,
     DetailsComponent,
-    LoadingspinnerComponent
+    LoadingspinnerComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule
+    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

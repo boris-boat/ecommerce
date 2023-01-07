@@ -2,6 +2,8 @@ import { Product } from './../../../models/product.model';
 import { Cart } from './../../../models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +12,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   cart: Cart = new Cart()
-  constructor(private cartService: CartService) { }
+  query: FormControl = new FormControl("")
+  constructor(private cartService: CartService, private route: Router) { }
 
   ngOnInit(): void {
     this.cartService.getCart()
@@ -27,5 +30,10 @@ export class NavbarComponent implements OnInit {
     item.quantity = item.quantity + action
     this.cart.items[index] = item
     this.cartService.updateCart(this.cart)
+  }
+  searchProducts() {
+    this.route.navigate(["/search", this.query.value])
+    this.query.reset()
+    return false
   }
 }
