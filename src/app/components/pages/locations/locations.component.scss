@@ -1,0 +1,49 @@
+.store-filter-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  .button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+      min-width: 70px;
+      background-color: white;
+      border: none;
+    }
+    .active {
+      border-bottom: 2px solid black;
+    }
+  }
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    width: 80%;
+
+    .left-img {
+      object-fit: contain;
+    }
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

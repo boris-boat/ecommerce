@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="row" style="height: 5vh">
+    <div class="store-filter-wrapper">
+      <div class="button-wrapper w-50" #buttonWrapper>
+        <button
+          class="loc-button"
+          *ngFor="let item of stores"
+          (click)="getStore(item.id, $event.target)"
+        >
+          {{ item.name }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row p-5 mt-5">
+    <div class="col-lg-6 left">
+      <div class="card">
+        <img [src]="activeStore.images" alt="" class="left-img" />
+      </div>
+    </div>
+    <div class="col-lg-6 right">
+      <div class="card">
+        <div class="top">
+          <h3>Radno vreme :</h3>
+          <p>{{ activeStore.workingHours }}</p>
+          <h3>Kontakt telefon :</h3>
+          <p>{{ activeStore.kontakt }}</p>
+        </div>
+        <div class="bottom">
+          <iframe [src]="activeStore.location | sanitizeUrl"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

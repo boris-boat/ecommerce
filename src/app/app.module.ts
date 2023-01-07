@@ -20,6 +20,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { LoadingspinnerComponent } from './components/shared/loadingspinner/loadingspinner.component';
 import { SearchComponent } from './components/pages/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LocationsComponent } from './components/pages/locations/locations.component';
+import { SanitizeUrlPipePipe } from './pipes/sanitize-url-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OneProductComponent,
     DetailsComponent,
     LoadingspinnerComponent,
-    SearchComponent
+    SearchComponent,
+    LocationsComponent,
+    SanitizeUrlPipePipe
   ],
   imports: [
     BrowserModule,

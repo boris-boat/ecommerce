@@ -1,7 +1,7 @@
 import { ProductService } from './../../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -15,8 +15,12 @@ export class SearchComponent implements OnInit {
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.filter = this.route.snapshot.params["query"]
-    this.getFilteredItems()
+    this.route.params.subscribe((params: Params) => {
+      this.filter = params["query"]
+      this.getFilteredItems()
+
+    })
+
   }
   getFilteredItems() {
     this.productService.getAllProducts().subscribe((response: Product[]) =>
