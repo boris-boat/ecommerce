@@ -1,0 +1,42 @@
+<div class="row p-3">
+  <div class="col-6">
+    <div class="card p-5">
+      <h1 class="text-center">Total price : {{ total | currency : "EUR" }}</h1>
+      <h2 class="text-center">Customer information</h2>
+      <h2>Name : {{ formData.name }}</h2>
+      <h2>Contact : {{ formData.contact }}</h2>
+      <h2>Address : {{ formData.address }}</h2>
+    </div>
+  </div>
+  <div class="col-6 card">
+    <h1 class="text-center">Items in cart :</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price per item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cart.items">
+          <td>{{ item.title }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price | currency : "EUR" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row p-3">
+  <div class="card mt-5 p-5">
+    <h4>
+      Thank you for going all the way through this demonstration.The odds of
+      items arriving to the addres {{ formData.address }} are not 0 , everything
+      is possible,but very close to 0. If you are interested in more projects
+      made by me , all the links on about us page are taking you to my portfolio
+      website.
+    </h4>
+  </div>
+</div>

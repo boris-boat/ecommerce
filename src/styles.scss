@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../node_modules/angular-notifier/styles.css";
 /* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
@@ -14,7 +16,6 @@ body {
 }
 
 /* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
 .row {
   margin: 0;
   padding: 0;

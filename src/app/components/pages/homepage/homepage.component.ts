@@ -24,7 +24,5 @@ export class HomepageComponent implements OnInit {
       this.tmp = new Cart(res)
     })
   }
-  addToCart(item: Product) {
-    this.cartService.addToCart(item)
-  }
+
 }

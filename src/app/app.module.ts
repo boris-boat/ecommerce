@@ -24,6 +24,8 @@ import { LocationsComponent } from './components/pages/locations/locations.compo
 import { SanitizeUrlPipePipe } from './pipes/sanitize-url-pipe.pipe';
 import { AboutComponent } from './components/pages/about/about.component';
 import { CartComponent } from './components/pages/cart/cart.component';
+import { NotifierModule } from 'angular-notifier';
+import { CartmodalcontentComponent } from './components/shared/cartmodalcontent/cartmodalcontent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,13 +41,14 @@ import { CartComponent } from './components/pages/cart/cart.component';
     LocationsComponent,
     SanitizeUrlPipePipe,
     AboutComponent,
-    CartComponent
+    CartComponent,
+    CartmodalcontentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule
+    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule, NotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -32,9 +32,22 @@ p {
   }
 }
 .right {
+  display: flex;
+
   .total-price {
+    width: 70%;
+    margin: auto;
+
     h2 {
       margin: auto;
+    }
+  }
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .forma {
+      width: 70%;
     }
   }
 }

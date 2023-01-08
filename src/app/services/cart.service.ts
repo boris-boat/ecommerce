@@ -2,6 +2,7 @@ import { Product } from './../models/product.model';
 import { Cart } from './../models/cart.model';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { NotifierService } from 'angular-notifier';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class CartService {
   cartObservable = new BehaviorSubject(new Cart())
   totalPriceObservable = new BehaviorSubject(0)
   cart = new Cart()
-  constructor() { }
+  constructor(private notifierService: NotifierService) { }
   getCart() {
     let cart = JSON.parse(localStorage.getItem("cart")!)
     if (cart) {
@@ -29,6 +30,8 @@ export class CartService {
       this.cart.items[index].quantity++
     }
     localStorage.setItem("cart", JSON.stringify(this.cart))
+    this.notifierService.notify("success", "Item added")
+
     this.getCart()
   }
   updateCart(cart: Cart) {
