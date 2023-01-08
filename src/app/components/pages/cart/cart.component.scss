@@ -51,3 +51,8 @@ p {
     }
   }
 }
+@media screen and (max-width: 480px) {
+  .cart-items-wrapper {
+    height: auto;
+  }
+}

@@ -1,10 +1,10 @@
 <app-carousel></app-carousel>
 <div class="product-list-wrapper">
   <div class="row text-center mt-5 w-100">
-    <h1>Nasa preporuka :</h1>
+    <h1>Great deals :</h1>
   </div>
-  <div class="row m-0 p-1">
-    <div class="col-3" *ngFor="let item of promotedItems">
+  <div class="row m-0 p-1 items">
+    <div class="col-lg-3" *ngFor="let item of promotedItems">
       <app-one-product [item]="item"></app-one-product>
     </div>
   </div>

@@ -36,3 +36,16 @@
     }
   }
 }
+@media screen and (max-width: 480px) {
+  .about-wrapper {
+    padding: 0;
+    .left {
+      margin: 0;
+      padding: 0;
+    }
+    .right {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

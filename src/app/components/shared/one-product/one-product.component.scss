@@ -10,12 +10,17 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
   }
   img {
+    cursor: pointer;
+
     object-fit: contain;
     height: 60%;
   }
   .price-wrapper {
+    cursor: pointer;
+
     display: flex;
     justify-content: center;
     .price {

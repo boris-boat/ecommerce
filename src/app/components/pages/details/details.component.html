@@ -1,8 +1,8 @@
 <div class="row" *ngIf="product.id">
-  <div class="col-6 left">
+  <div class="col-lg-6 left">
     <img [src]="product.image" alt="" />
   </div>
-  <div class="col-6 right">
+  <div class="col-lg-6 right">
     <mat-card class="example-card details-card">
       <mat-card-header>
         <mat-card-title>{{ product.title }}</mat-card-title>
@@ -14,7 +14,7 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button (click)="addToCart(product)">
-          Dodaj u korpu
+          Add to cart
         </button>
       </mat-card-actions>
     </mat-card>

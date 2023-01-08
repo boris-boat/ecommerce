@@ -1,19 +1,31 @@
 <div class="row mt-2">
-  <div class="category-cointainer" #categoryContainer *ngIf="categories.length">
-    <button (click)="getAllProducts('', $event.target)" class="active">
-      All
-    </button>
-    <button
-      class="category-button"
-      *ngFor="let category of categories"
-      (click)="getAllProducts(category, $event.target)"
-    >
-      {{ category }}
-    </button>
+  <div class="category-cointainer" *ngIf="categories.length">
+    <div class="button-wrapper" #categoryContainer>
+      <button (click)="getAllProducts('', $event.target)" class="active">
+        All
+      </button>
+      <button
+        class="category-button"
+        *ngFor="let category of categories"
+        (click)="getAllProducts(category, $event.target)"
+      >
+        {{ category }}
+      </button>
+    </div>
+    <div class="select-wrapper">
+      <select
+        class="form-select category-select"
+        [(ngModel)]="selectValue"
+        (change)="getAllProductsSelect()"
+      >
+        <option selected>All</option>
+        <option *ngFor="let category of categories">{{ category }}</option>
+      </select>
+    </div>
   </div>
 </div>
 <div class="row mt-4" *ngIf="products.length != 0">
-  <div class="col-3 mb-4" *ngFor="let item of products">
+  <div class="col-lg-3 mb-4" *ngFor="let item of products">
     <app-one-product [item]="item"></app-one-product>
   </div>
 </div>

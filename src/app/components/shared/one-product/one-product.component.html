@@ -1,16 +1,21 @@
 <mat-card class="single-product m-1">
-  <mat-card-header style="color: black" class="product-title">
+  <mat-card-header
+    [routerLink]="['/details', item.id]"
+    style="color: black"
+    class="product-title"
+    [routerLink]="['/details', item.id]"
+  >
     <mat-card-title>{{ item.title }}</mat-card-title>
   </mat-card-header>
   <img mat-card-image [src]="item.image" [routerLink]="['/details', item.id]" />
-  <mat-card-content class="price-wrapper">
+  <mat-card-content class="price-wrapper" [routerLink]="['/details', item.id]">
     <p class="price">{{ item.price | currency : "EUR" }}</p>
   </mat-card-content>
   <mat-card-actions class="button-wrapper">
     <button mat-raised-button [routerLink]="['/details', item.id]">
-      Detaljnije
+      Details
     </button>
-    <button mat-raised-button (click)="addToCart(item)">Dodaj u korpu</button>
+    <button mat-raised-button (click)="addToCart(item)">Add to cart</button>
   </mat-card-actions>
 </mat-card>
 <app-loadingspinner *ngIf="!item"> </app-loadingspinner>

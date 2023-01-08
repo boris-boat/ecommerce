@@ -11,3 +11,10 @@ h3 {
   padding: 0;
   cursor: pointer;
 }
+@media screen and (max-width: 480px) {
+  .category-navbar-items {
+    .link-wrapper {
+      width: 100% !important;
+    }
+  }
+}

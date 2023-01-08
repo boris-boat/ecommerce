@@ -3,13 +3,50 @@
   margin: auto;
   width: 30%;
   justify-content: space-around;
-  button {
-    min-width: 70px;
-    padding: 5px;
-    background-color: white;
-    border: none;
+  margin-top: 10px;
+  .select-wrapper {
+    display: none;
   }
-  .active {
-    border-bottom: 2px solid black;
+  .button-wrapper {
+    button {
+      min-width: 70px;
+      padding: 5px;
+      background-color: white;
+      border: none;
+    }
+    .active {
+      -webkit-animation: shadow-drop-2-center 0.4s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+    }
+  }
+}
+@keyframes shadow-drop-2-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    border-radius: 30px;
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+@media screen and (max-width: 480px) {
+  .category-cointainer {
+    width: 80%;
+    .button-wrapper {
+      display: none;
+    }
+
+    .select-wrapper {
+      display: block;
+      width: 80%;
+    }
   }
 }

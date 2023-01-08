@@ -31,3 +31,16 @@
     width: 60%;
   }
 }
+@media screen and (max-width: 480px) {
+  .right {
+    margin-bottom: 20px;
+    .details-card {
+      width: 100%;
+      height: 100%;
+    }
+    .desc-text {
+      margin: auto;
+      width: 80%;
+    }
+  }
+}

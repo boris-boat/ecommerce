@@ -19,7 +19,7 @@ import { DetailsComponent } from './components/pages/details/details.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { LoadingspinnerComponent } from './components/shared/loadingspinner/loadingspinner.component';
 import { SearchComponent } from './components/pages/search/search.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocationsComponent } from './components/pages/locations/locations.component';
 import { SanitizeUrlPipePipe } from './pipes/sanitize-url-pipe.pipe';
 import { AboutComponent } from './components/pages/about/about.component';
@@ -48,7 +48,7 @@ import { CartmodalcontentComponent } from './components/shared/cartmodalcontent/
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule, NotifierModule
+    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule, NotifierModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

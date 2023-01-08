@@ -11,6 +11,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AllproductsComponent implements OnInit {
   products: Product[] = []
   categories: string[] = []
+  selectValue: any
   @ViewChild('categoryContainer') buttonContainer: any
   constructor(private productService: ProductService) { }
 
@@ -34,5 +35,12 @@ export class AllproductsComponent implements OnInit {
     this.productService.getCategories().subscribe((response: string[]) => {
       this.categories = response
     })
+  }
+  getAllProductsSelect(filter?: any) {
+    console.log(this.selectValue)
+    if (this.selectValue != "All") {
+      this.productService.getAllProducts(`/category/${this.selectValue}`).subscribe((response: Product[]) => this.products = response.map((item) => new Product(item)))
+    }
+    else this.productService.getAllProducts().subscribe((response: Product[]) => this.products = response.map((item) => new Product(item)))
   }
 }
