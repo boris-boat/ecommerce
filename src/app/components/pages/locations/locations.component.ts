@@ -1,5 +1,5 @@
 import { Store } from './../../../models/store.model';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { stores } from './stores';
 @Component({
   selector: 'app-locations',
@@ -15,6 +15,9 @@ export class LocationsComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+  ngAfterViewInit() {
+    this.buttonContainer.nativeElement.children[0].classList.add("active")
   }
   getStore(index: number, button?: any) {
     for (let i = 0; i < this.buttonContainer?.nativeElement.children.length; i++) {

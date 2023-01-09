@@ -7,7 +7,12 @@
   >
     <mat-card-title>{{ item.title }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="item.image" [routerLink]="['/details', item.id]" />
+  <img
+    mat-card-image
+    [src]="item.image"
+    alt="product photo"
+    [routerLink]="['/details', item.id]"
+  />
   <mat-card-content class="price-wrapper" [routerLink]="['/details', item.id]">
     <p class="price">{{ item.price | currency : "EUR" }}</p>
   </mat-card-content>

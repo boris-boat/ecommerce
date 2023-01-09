@@ -1,3 +1,4 @@
+import { PagenotfoundComponent } from './components/pages/pagenotfound/pagenotfound.component';
 import { SearchComponent } from './components/pages/search/search.component';
 import { AllproductsComponent } from './components/pages/allproducts/allproducts.component';
 import { DetailsComponent } from './components/pages/details/details.component';
@@ -14,7 +15,8 @@ const routes: Routes = [{ path: "", component: HomepageComponent },
 { path: "search/:query", component: SearchComponent }, {
   path: "locations", component: LocationsComponent
 }, { path: "about", component: AboutComponent }
-  , { path: "cart", component: CartComponent }];
+  , { path: "cart", component: CartComponent },
+{ path: "**", component: PagenotfoundComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

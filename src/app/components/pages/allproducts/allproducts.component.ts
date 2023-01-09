@@ -11,7 +11,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AllproductsComponent implements OnInit {
   products: Product[] = []
   categories: string[] = []
-  selectValue: any
+  selectValue: string = "All"
   @ViewChild('categoryContainer') buttonContainer: any
   constructor(private productService: ProductService) { }
 

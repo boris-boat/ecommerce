@@ -1,12 +1,12 @@
 <div class="navigation">
   <div class="row h-100 w-100">
     <div
-      class="col-lg-1 offset-lg-1 h-100 d-flex justify-content-center align-items-center"
+      class="col-lg-1 offset-lg-1 h-100 d-flex justify-content-center align-items-center mt-lg-0 mt-2"
     >
       <h1 [routerLink]="['/']" class="m-0">Banananas</h1>
     </div>
     <div
-      class="col-lg-6 col-8 offset-lg-1 d-flex justify-content-center align-items-center"
+      class="col-lg-6 col-8 offset-lg-1 d-flex justify-content-center align-items-center mb-lg-0 mb-2"
     >
       <div class="input-group">
         <form class="forma" (submit)="searchProducts()">
@@ -38,11 +38,10 @@
             <div
               *ngIf="cart.items.length == 0"
               ngbDropdownMenu
-              aria-labelledby="dropdownBasic1"
               class="cart-items no-items"
             >
               <div class="card w-100 no-items-card">
-                <h1 class="m-0 p-0">Cart is empty</h1>
+                <h2 class="m-0 p-0">Cart is empty</h2>
               </div>
             </div>
             <div *ngIf="cart.items.length" ngbDropdownMenu class="cart-items">
@@ -75,6 +74,7 @@
                   [routerLink]="['/cart']"
                   mat-raised-button
                   color="primary"
+                  ngbDropdownToggle
                 >
                   Go to cart
                 </button>

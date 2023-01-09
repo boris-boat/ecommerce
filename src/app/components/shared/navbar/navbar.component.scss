@@ -16,6 +16,7 @@
     .card {
       .title {
         cursor: pointer;
+        width: auto;
       }
       padding: 20px;
       display: flex;
@@ -84,9 +85,10 @@ h1 {
       margin-bottom: 10px;
     }
     .cart-items {
-      min-width: 100px !important;
+      min-width: 300px !important;
       max-width: 400px;
       overflow: auto;
+      transform: translate3d(25px, 32px, 0px) !important;
       .card {
         overflow: auto;
       }

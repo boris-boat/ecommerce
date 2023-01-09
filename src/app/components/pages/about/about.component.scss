@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   padding: 50px;
+  margin-bottom: 81px;
+
   .left {
     display: flex;
     justify-content: center;
@@ -41,11 +43,20 @@
     padding: 0;
     .left {
       margin: 0;
-      padding: 0;
+      padding-bottom: 50px;
+      img {
+        margin-top: -100px;
+      }
     }
     .right {
       margin: 0;
       padding: 0;
+      .text {
+        margin-top: -150px;
+      }
+      .links {
+        margin-bottom: 30px;
+      }
     }
   }
 }

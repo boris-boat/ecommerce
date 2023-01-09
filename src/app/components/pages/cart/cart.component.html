@@ -1,11 +1,11 @@
-<div class="row h-lg-75 p-5">
-  <div class="col-lg-6">
+<div class="row h-lg-75 p-lg-5">
+  <div class="col-lg-6 pr-lg-3 mt-3 m-lg-0">
     <div class="card text-center p-3" *ngIf="cartItems.items.length === 0">
       <h1 class="">Your cart is empty</h1>
     </div>
     <div class="cart-items-wrapper" *ngIf="cartItems.items.length != 0">
       <div class="card">
-        <div class="card m-3 p-3 one-item" *ngFor="let item of cartItems.items">
+        <div class="m-3 p-3 one-item card" *ngFor="let item of cartItems.items">
           <div class="title">
             <div class="title-left">
               <p>{{ item.title }}</p>
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6 right p-3 mt-3 mt-lg-0 card">
+  <div class="col-lg-6 right p-lg-3 mt-3 mt-lg-0 card mb-3 p-3">
     <div class="row align-items-center">
       <div class="col mt-3 mb-5">
         <div class="total-price card">

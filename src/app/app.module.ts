@@ -26,6 +26,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { CartComponent } from './components/pages/cart/cart.component';
 import { NotifierModule } from 'angular-notifier';
 import { CartmodalcontentComponent } from './components/shared/cartmodalcontent/cartmodalcontent.component';
+import { PagenotfoundComponent } from './components/pages/pagenotfound/pagenotfound.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,9 @@ import { CartmodalcontentComponent } from './components/shared/cartmodalcontent/
     SanitizeUrlPipePipe,
     AboutComponent,
     CartComponent,
-    CartmodalcontentComponent
+    CartmodalcontentComponent,
+    PagenotfoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

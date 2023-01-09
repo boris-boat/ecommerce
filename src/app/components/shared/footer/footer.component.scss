@@ -1,0 +1,11 @@
+.footer-wrapper {
+  position: sticky;
+  bottom: 0;
+  .footer {
+    padding: 15px;
+    background-color: #eca869;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
