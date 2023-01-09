@@ -25,7 +25,7 @@ export class AllproductsComponent implements OnInit {
       this.buttonContainer.nativeElement.children[i].classList = 'category-button'
     }
     button?.classList.add("active")
-
+    this.products = []
     if (filter) {
       this.productService.getAllProducts(`/category/${filter}`).subscribe((response: Product[]) => this.products = response.map((item) => new Product(item)))
     }

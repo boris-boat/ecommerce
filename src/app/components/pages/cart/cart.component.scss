@@ -33,7 +33,7 @@ p {
 }
 .right {
   display: flex;
-
+  min-height: 67vh;
   .total-price {
     width: 70%;
     margin: auto;

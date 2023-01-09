@@ -86,9 +86,9 @@ h1 {
     }
     .cart-items {
       min-width: 300px !important;
-      max-width: 400px;
+      max-width: 350px;
       overflow: auto;
-      transform: translate3d(25px, 32px, 0px) !important;
+      transform: translate3d(32px, 32px, 0px) !important;
       .card {
         overflow: auto;
       }

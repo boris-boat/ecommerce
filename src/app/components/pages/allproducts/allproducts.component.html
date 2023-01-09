@@ -24,6 +24,8 @@
     </div>
   </div>
 </div>
+<app-loadingspinner *ngIf="products.length == 0"> </app-loadingspinner>
+
 <div class="row mt-4 products-wrapper">
   <div class="row" *ngIf="products.length != 0">
     <div class="col-lg-3 mb-4" *ngFor="let item of products">
@@ -31,4 +33,3 @@
     </div>
   </div>
 </div>
-<app-loadingspinner *ngIf="products.length == 0"> </app-loadingspinner>
