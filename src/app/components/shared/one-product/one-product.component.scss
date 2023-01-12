@@ -1,4 +1,7 @@
 .single-product {
+  &:hover {
+    animation: changeBg 0.5s both;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -14,7 +17,6 @@
   }
   img {
     cursor: pointer;
-
     object-fit: contain;
     height: 60%;
   }
@@ -37,5 +39,13 @@
 @media screen and (max-width: 480px) {
   .single-product {
     padding: 20px;
+  }
+}
+
+@keyframes changeBg {
+  100% {
+    -webkit-box-shadow: 6px 2px 24px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 2px 24px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 2px 24px 3px rgba(0, 0, 0, 0.75);
   }
 }

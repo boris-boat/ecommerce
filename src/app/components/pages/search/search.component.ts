@@ -11,7 +11,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class SearchComponent implements OnInit {
   products?: Product[]
   filter: string = ""
-  searching: boolean = true
+  searching: boolean = false
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -23,9 +23,11 @@ export class SearchComponent implements OnInit {
 
   }
   getFilteredItems() {
+    this.products = []
+    this.searching = true
     this.productService.getAllProducts().subscribe((response: Product[]) =>
       this.products = response.filter((product) => {
-
+        this.searching = false
         if (product.title.toLowerCase().includes(this.filter.toLowerCase())) return product
         else {
           return null

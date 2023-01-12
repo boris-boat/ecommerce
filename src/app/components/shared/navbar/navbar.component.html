@@ -28,7 +28,12 @@
     <div class="col d-flex justify-content-center align-items-center p-0 w-100">
       <div class="row">
         <div class="col">
-          <div ngbDropdown placement="bottom-end" class="d-inline-block">
+          <div
+            ngbDropdown
+            placement="bottom-end"
+            class="d-inline-block"
+            #myDrop="ngbDropdown"
+          >
             <button id="dropdownBasic1" ngbDropdownToggle class="cart-icon">
               <mat-icon [matBadge]="cart.items.length" matBadgeColor="warn"
                 >shopping_cart</mat-icon
@@ -74,7 +79,7 @@
                   [routerLink]="['/cart']"
                   mat-raised-button
                   color="primary"
-                  ngbDropdownToggle
+                  (click)="$event.stopPropagation(); myDrop.close()"
                 >
                   Go to cart
                 </button>
