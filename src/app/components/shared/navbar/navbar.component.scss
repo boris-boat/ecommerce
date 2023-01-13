@@ -6,9 +6,10 @@
     border: none;
   }
   .cart-items {
+    animation: dropdownFadeIn 0.2s normal;
     padding: 20px;
     min-width: 500px;
-    max-width: auto;
+    width: auto;
     .button-wrapper {
       display: flex;
       justify-content: center;
@@ -63,7 +64,14 @@ h1 {
     opacity: 1;
   }
 }
-
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .no-items {
   position: absolute;
   right: 0;

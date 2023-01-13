@@ -1,3 +1,4 @@
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Cart } from 'src/app/models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 import { Component, OnInit, Input } from '@angular/core';
@@ -11,10 +12,12 @@ export class CartmodalcontentComponent implements OnInit {
   @Input() total: number = 0
   @Input() formData: any
   @Input() cart: Cart = new Cart()
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
 
   }
-
+  closeModal() {
+    this.modalService.dismissAll()
+  }
 }

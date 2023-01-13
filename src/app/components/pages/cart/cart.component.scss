@@ -55,11 +55,21 @@ p {
   margin-top: -10px;
 }
 @media screen and (max-width: 480px) {
+  .row {
+    padding: 0 !important;
+  }
   .cart-items-wrapper {
     height: auto;
   }
   .right {
     border: none !important;
+    .row {
+      .form-wrapper {
+        .forma {
+          width: 90%;
+        }
+      }
+    }
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1000px) {

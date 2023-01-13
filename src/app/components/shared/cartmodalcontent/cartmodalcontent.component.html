@@ -2,13 +2,13 @@
   <div class="col-lg-6 mt-3 mb-3 m-lg-0">
     <div class="card p-5">
       <h1 class="text-center">Total price : {{ total | currency : "EUR" }}</h1>
-      <h2 class="text-center">Customer information :</h2>
+      <h2>Customer information :</h2>
       <h2>Name : {{ formData.name }}</h2>
       <h2>Contact : {{ formData.contact }}</h2>
       <h2>Address : {{ formData.address }}</h2>
     </div>
   </div>
-  <div class="col-lg-6 col-10 card offset-1 offset-lg-0">
+  <div class="col-lg-6 col-12 offset-lg-0">
     <h1 class="text-center">Items in cart :</h1>
     <table class="table table-striped">
       <thead>
@@ -39,4 +39,12 @@
       website.
     </h4>
   </div>
+  <button
+    class="mt-2 w-50 m-auto"
+    mat-raised-button
+    color="primary"
+    (click)="closeModal()"
+  >
+    Close
+  </button>
 </div>

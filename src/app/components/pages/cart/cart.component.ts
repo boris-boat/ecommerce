@@ -46,6 +46,7 @@ export class CartComponent implements OnInit {
       modalRef.componentInstance.total = this.totalPrice
       modalRef.componentInstance.formData = this.forma.value
       modalRef.componentInstance.cart = this.cartItems
+      modalRef.componentInstance.close = this.modalService.dismissAll
     }
     else {
       this.notifierService.notify("error", "Please fill in all fields !")
