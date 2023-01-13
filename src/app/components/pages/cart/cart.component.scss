@@ -51,7 +51,18 @@ p {
     }
   }
 }
+.footer {
+  margin-top: -10px;
+}
 @media screen and (max-width: 480px) {
+  .cart-items-wrapper {
+    height: auto;
+  }
+  .right {
+    border: none !important;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1000px) {
   .cart-items-wrapper {
     height: auto;
   }

@@ -1,5 +1,5 @@
 .left {
-  height: 80vh;
+  height: 79.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
     text-align: center;
 
     width: 70%;
-    height: 80%;
+    height: auto;
   }
   .desc-text {
     margin: auto;
@@ -39,9 +39,23 @@
       width: 100%;
       height: 100%;
     }
+
     .desc-text {
       margin: auto;
+      width: 90%;
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1000px) {
+  .right {
+    .details-card {
       width: 80%;
+      height: auto;
+      margin-bottom: 25px;
+    }
+    .desc-text {
+      margin: auto;
+      width: 90%;
     }
   }
 }

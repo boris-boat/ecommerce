@@ -18,3 +18,10 @@ h3 {
     }
   }
 }
+@media screen and (min-width: 481px) and (max-width: 1000px) {
+  .category-navbar-items {
+    .link-wrapper {
+      width: 100% !important;
+    }
+  }
+}

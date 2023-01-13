@@ -5,7 +5,7 @@
     <img [src]="product.image" alt="" />
   </div>
   <div class="col-lg-6 right">
-    <mat-card class="example-card details-card">
+    <mat-card class="details-card p-lg-5">
       <mat-card-header>
         <mat-card-title>{{ product.title }}</mat-card-title>
         <mat-card-subtitle class="mt-2">{{
@@ -24,3 +24,4 @@
     </mat-card>
   </div>
 </div>
+<app-footer *ngIf="product.id"></app-footer>
