@@ -28,6 +28,7 @@ import { NotifierModule } from 'angular-notifier';
 import { CartmodalcontentComponent } from './components/shared/cartmodalcontent/cartmodalcontent.component';
 import { PagenotfoundComponent } from './components/pages/pagenotfound/pagenotfound.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { NgMagnizoomModule } from 'ng-magnizoom';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule, NotifierModule, FormsModule
+    NgbModule, HttpClientModule, MatCardModule, MatButtonModule, MatIconModule, MatBadgeModule, MatChipsModule, ReactiveFormsModule, NotifierModule, FormsModule, NgMagnizoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

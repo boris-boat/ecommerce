@@ -11,12 +11,16 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   product: Product = new Product()
-  id?: string
+  loading = true
   constructor(private productService: ProductService, private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      this.productService.getOneProduct(params["id"]).subscribe((response: Product) => this.product = new Product(response))
+      this.productService.getOneProduct(params["id"]).subscribe((response: Product) => {
+        this.loading = false
+        this.product = new Product(response)
+        console.log(this.product)
+      })
     })
 
   }
